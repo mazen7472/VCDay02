@@ -1,0 +1,65 @@
+Day02
+
+2-what is pull request and request & differrent bettween them?
+
+What is a Pull Request and Request & Difference Between Them?
+Pull Request (PR): A GitHub feature to propose, review, and merge changes from one branch or repository to another.
+Request: Likely refers to a Merge Request (GitLab’s equivalent to a PR) or a general change request.
+Difference:
+Pull Request: GitHub-specific term for proposing and merging changes.
+Merge Request: GitLab’s term for the same process. Both use git merge or rebase internally but differ in platform and UI.
+
+
+
+3-Make fork from your project and use it from anthor account 
+
+git clone https://github.com/second-username/test.git
+>> cd test
+git add answers.md
+git commit -m "Update answers from forked repo"
+git push origin main
+
+
+4-What is the command to delete the branch "new-email"
+
+git branch -d new-email
+
+
+
+5-What is the command to push the current repository to the remote origin?
+
+git push origin main
+
+
+
+6-what is git Rebase and how to use it ?
+
+Git rebase is a command to rewrite commit history by moving or combining commits from one branch onto another. Unlike git merge, which creates a merge commit, rebase creates a linear history, making it look like changes were applied sequentially.
+
+Switch to the new-email branch:
+git checkout new-email
+
+Push the rebased branch:
+git push -f origin new-email
+
+
+
+
+7-What is the command to get all the change history of the remote repository "origin"?
+
+git log origin/main 
+
+
+8-What is the command to show the differences between the current branch and the branch "new-email"?
+git diff main new-email
+
+
+9-what is tags and Make five tags and release two of them?
+
+git tag -a v1.0.0 -m "Initial release"
+git tag -a v1.1.0 -m "Added answers.md"
+git tag -a v1.2.0 -m "Improved README"
+git tag -a v2.0.0 -m "Major update with deployment"
+git tag -a v2.1.0 -m "Bug fixes"
+
+git push origin --tags
